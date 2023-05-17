@@ -91,7 +91,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 5. **` Home page:`**
     - **Banner section** -A slider/banner/ a meaningful section.✅✅✅ 
 
-    - **Gallery Section** - Show relevant pictures. Try to make it attractive.
+    - **Gallery Section** - Show relevant pictures. Try to make it attractive.✅✅✅ 
     - **Shop by category**- Implement a tab system for **Shop by category** section. Explore [React-tabs](https://www.npmjs.com/package/react-tabs), or you can implement this using custom CSS. There will be 3 tabs, each containing sub-categories of the category you have chosen. 
     <br/>
 
