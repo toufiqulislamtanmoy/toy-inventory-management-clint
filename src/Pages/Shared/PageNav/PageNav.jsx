@@ -21,7 +21,7 @@ const PageNav = () => {
                         }
                     </ul>
                 </div>
-                <Link to='/'><img className="h-10" src={logo} alt="" /></Link>
+                <Link className="flex items-center gap-2" to='/'><img className="h-10" src={logo} alt="" />Toy-Monster</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
