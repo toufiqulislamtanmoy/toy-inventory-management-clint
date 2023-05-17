@@ -6,7 +6,7 @@ const PageNav = () => {
         <li><Link to="">All Toys</Link></li>
         <li><Link>My Toys</Link></li>
         <li><Link>Add A Toys</Link></li>
-        <li><Link>Blogs</Link></li>
+        <li><Link to="/blogs">Blogs</Link></li>
     </>
     return (
         <div className="navbar bg-slate-200 lg:px-24">

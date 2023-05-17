@@ -116,10 +116,10 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 6. **` Blogs`** page: Create a Blog where you will have to answer the following questions:
     
-    - What is an access token and refresh token? How do they work and where should we store them on the client-side?
-    - Compare SQL and NoSQL databases?
-    - What is express js? What is Nest JS (google it)? 
-    - What is MongoDB aggregate and how does it work (google it)?
+    - What is an access token and refresh token? How do they work and where should we store them on the client-side?✅✅✅ 
+    - Compare SQL and NoSQL databases?✅✅✅ 
+    - What is express js? What is Nest JS (google it)? ✅✅✅ 
+    - What is MongoDB aggregate and how does it work (google it)?✅✅✅ 
     
     <br/>
 
