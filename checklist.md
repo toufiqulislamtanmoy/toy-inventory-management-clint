@@ -61,7 +61,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 <br/>
 
 3. Your website should have a navbar with the **Website logo, Website name ✅✅✅, Home✅✅✅, All Toys ✅✅✅, My Toys✅✅✅, Add A Toy✅✅✅, Blogs✅✅✅,** and **User profile picture✅✅✅**. 
-    > **Note:** The **User profile picture, Add A Toy** and **My Toys** on the navbar are conditional based on login. If the user is logged in, the navbar will show the profile picture; otherwise, it will show the **Login button**. If the username is available, the user's name will be visible when the mouse hovers over the profile picture.
+    > **Note:** The **User profile picture, Add A Toy** and **My Toys** on the navbar are conditional based on login. If the user is logged in, the navbar will show the profile picture; otherwise, it will show the **Login button**. If the username is available, the user's name will be visible when the mouse hovers over the profile picture.✅✅✅
 
 <br/>
 

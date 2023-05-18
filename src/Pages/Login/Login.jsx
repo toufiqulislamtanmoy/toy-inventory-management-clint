@@ -3,6 +3,15 @@ import { FcGoogle } from "react-icons/fc";
 import login from "../../assets/login/login.json"
 import Lottie from "lottie-react"
 const Login = () => {
+    const handelLogin = (event) =>{
+        event.preventDefault();
+        const from = event.target;
+        const email = from.email.value;
+        const password = from.password.value;
+
+        console.log(email,password)
+
+    }
     return (
         <div className="hero min-h-screen ">
             <div className="hero-content flex-col lg:flex-row-reverse border border-red-600 rounded-2xl">
@@ -11,7 +20,7 @@ const Login = () => {
                 </div>
                 <div className="card-body w-full rounded-3xl ">
                     <div className="divider text-2xl font-bold">Login</div>
-                    <form>
+                    <form onSubmit={handelLogin}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>

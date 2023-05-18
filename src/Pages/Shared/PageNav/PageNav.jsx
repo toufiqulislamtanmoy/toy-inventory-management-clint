@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
 const PageNav = () => {
+    const { user } = useContext(AuthContext);
     const navlist = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="">All Toys</Link></li>
-        <li><Link>My Toys</Link></li>
-        <li><Link>Add A Toys</Link></li>
+        {user ? (
+            <>
+                <li><Link to="/my-toys">My Toys</Link></li>
+                <li><Link to="/add-toy">Add a Toy</Link></li>
+            </>
+        ) : null}
         <li><Link to="/blogs">Blogs</Link></li>
 
     </>
@@ -30,13 +37,16 @@ const PageNav = () => {
                 </ul>
             </div>
             <div className="navbar-end space-x-3">
-                <div>
-                    <img className="h-10 rounded-full" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />
-                </div>
-                <div>
-                    <Link className="mr-3" to="/login">Login</Link>
-                    <button>Logout</button>
-                </div>
+                {user ? (
+                    <div className="flex space-x-3">
+                        <img className="h-10 rounded-full" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />
+                        <button>Logout</button>
+                    </div>
+                ) : (
+                    <div>
+                        <Link className="mr-3" to="/login">Login</Link>
+                    </div>
+                )}
             </div>
         </div>
     );
