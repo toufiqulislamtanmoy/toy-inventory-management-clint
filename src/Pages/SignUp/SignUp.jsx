@@ -1,13 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import login from "../../assets/login/login.json"
 import Lottie from "lottie-react"
 import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2'
+import useTitle from "../../CustomHooks/useTitle";
 const SignUp = () => {
-    const { userSignIn ,userProfileUpdate} = useContext(AuthContext);
+    const { userSignUp, userProfileUpdate, useLogout } = useContext(AuthContext);
     const [errorMsg, setErrorMsg] = useState('');
+    useTitle("Sign Up")
+    const navigate = useNavigate();
     const handelSignUp = (event) => {
         event.preventDefault();
         const from = event.target;
@@ -20,26 +23,28 @@ const SignUp = () => {
         const validation = validatePassword(password);
 
         if (validation.isValid) {
-            userSignIn(email, password).then((signInUser) => {
+            userSignUp(email, password).then((signInUser) => {
                 const user = signInUser.user;
                 console.log(user)
                 userProfileUpdate(name, photoUrl).then(() => {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Your Account is Created Successfully',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                   
-                    from.reset();
+                    useLogout().then(() => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Account Create Successful',
+                            text: "Go to Login",
+                        });
+                        navigate("/login");
 
+                    }).catch((error) => {
+                        console.log(error.message)
+                    });
                 }).catch((error) => {
                     console.log(error.message);
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
-                        text:error.message,
-                      })
+                        text: error.message,
+                    })
                 });
 
             })
@@ -50,12 +55,12 @@ const SignUp = () => {
                         icon: 'error',
                         title: 'Oops...',
                         text: `${errorMessage} ${errorCode}`,
-                      })
-                      console.log(errorMessage)
+                    })
+                    console.log(errorMessage)
                 });
 
             setErrorMsg('');
-            
+
         } else {
             setErrorMsg(validation.errorMessage);
         }

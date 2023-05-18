@@ -1,4 +1,6 @@
+import useTitle from "../../CustomHooks/useTitle";
 const Blogs = () => {
+    useTitle("Blogs");
     return (
         <div className="my-20 mx-10">
             {/* Bolg1 */}

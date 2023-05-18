@@ -84,7 +84,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
     <br/>
 
-    > **Note:** Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result.
+    > **Note:** Do not enforce the email verification method, as it will inconvenience the examiner. If you want, you can add email verification after receiving the assignment result.✅✅✅
 
 <br/>
 
@@ -114,7 +114,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-6. **` Blogs`** page: Create a Blog where you will have to answer the following questions:
+6. **` Blogs`** page: Create a Blog where you will have to answer the following questions:✅✅✅
     
     - What is an access token and refresh token? How do they work and where should we store them on the client-side?✅✅✅ 
     - Compare SQL and NoSQL databases?✅✅✅ 
@@ -196,7 +196,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-13. Use the Environment variable to hide the Firebase config keys and Mongodb credentials. 
+13. Use the Environment variable to hide the Firebase config keys and Mongodb credentials. ✅✅
 
 <hr/>
 <br/>
@@ -213,7 +213,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 2. **Reload:** If you reload the protected/private routes (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route. 
 
-2. Make Home page of your website mobile & desktop responsive (tablet responsive is optional)
+2. Make Home page of your website mobile & desktop responsive (tablet responsive is optional)✅✅✅
 
 <br/>
 
@@ -225,9 +225,9 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.
+6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.✅✅✅
 
-7.  Make the component name, folder structure, and route name meaningful. If needed, add comments. 
+7.  Make the component name, folder structure, and route name meaningful. If needed, add comments. ✅✅✅
 
 <br/>
 
