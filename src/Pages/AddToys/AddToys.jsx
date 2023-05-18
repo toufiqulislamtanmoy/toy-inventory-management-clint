@@ -45,7 +45,7 @@ const AddToys = () => {
     }
     return (
         <div className="hero min-h-screen"  style={{ backgroundImage: `url(${banner})` }}>
-            <div className="card w-full max-w-[80%] shadow-2xl bg-base-100">
+            <div className="my-20 card w-full max-w-[80%] shadow-2xl bg-base-100">
                 <div className="card-body">
                 <div className="divider text-2xl font-bold">Add Toy</div>
                     <form onSubmit={handelAddToy}>

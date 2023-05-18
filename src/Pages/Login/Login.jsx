@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import login from "../../assets/login/login.json"
 import Lottie from "lottie-react"
@@ -10,7 +10,8 @@ const Login = () => {
     const { userLogin, googleLogin } = useContext(AuthContext);
     useTitle("Login")
     const navigate = useNavigate();
-
+    const location = useLocation();
+    const destination = location.state?.from?.pathname || "/"
     const handelLogin = (event) => {
         event.preventDefault();
         const from = event.target;
@@ -28,7 +29,7 @@ const Login = () => {
                 title: 'Login Successful',
                 text: `Welcome Back ${user.displayName}`,
             });
-            navigate("/", { replace: true });
+            navigate(destination, { replace: true });
         })
             .catch((error) => {
                 const errorCode = error.code;
