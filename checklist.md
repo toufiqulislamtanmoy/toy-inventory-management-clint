@@ -67,20 +67,20 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 4. **`Login & Registration systems:`** On the Registration and Login pages, display relevant error messages when necessary.
 
-    > **Login Page:** When a user clicks on the login button, they will be redirected to the login page having the following:
+    > **Login Page:** When a user clicks on the login button, they will be redirected to the login page having the following: ✅✅✅
 
-    - Email/Password
-    - Google Sign-in
-    - A link that will redirect to the registration page
+    - Email/Password✅✅✅
+    - Google Sign-in✅✅✅
+    - A link that will redirect to the registration page✅✅✅
 
     <br/>
 
-    > **Registration Page:**  The Registration page will have the Email/Password form having the following fields:
+    > **Registration Page:**  The Registration page will have the Email/Password form having the following fields:✅✅✅
 
-    - Name
-    - Email
-    - Password
-    - Photo URL
+    - Name✅✅✅
+    - Email✅✅✅
+    - Password✅✅✅
+    - Photo URL✅✅✅
 
     <br/>
 

@@ -1,18 +1,91 @@
 import { Link } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
 import login from "../../assets/login/login.json"
 import Lottie from "lottie-react"
+import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2'
 const SignUp = () => {
-    const handelSignUp = (event) =>{
+    const { userSignIn ,userProfileUpdate} = useContext(AuthContext);
+    const [errorMsg, setErrorMsg] = useState('');
+    const handelSignUp = (event) => {
         event.preventDefault();
         const from = event.target;
         const name = from.name.value;
         const email = from.email.value;
         const photoUrl = from.photoUrl.value;
         const password = from.password.value;
-        console.log(name,email,photoUrl,password)
+        console.log(name, email, photoUrl, password)
+
+        const validation = validatePassword(password);
+
+        if (validation.isValid) {
+            userSignIn(email, password).then((signInUser) => {
+                const user = signInUser.user;
+                console.log(user)
+                userProfileUpdate(name, photoUrl).then(() => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Your Account is Created Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                   
+                    from.reset();
+
+                }).catch((error) => {
+                    console.log(error.message);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text:error.message,
+                      })
+                });
+
+            })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: `${errorMessage} ${errorCode}`,
+                      })
+                      console.log(errorMessage)
+                });
+
+            setErrorMsg('');
+            
+        } else {
+            setErrorMsg(validation.errorMessage);
+        }
+
+
+
 
     }
+
+    const validatePassword = (password) => {
+        const requirements = [
+            { regex: /^(?=.*[a-z])/, message: "at least one lowercase letter" },
+            { regex: /^(?=.*[A-Z])/, message: "at least one uppercase letter" },
+            { regex: /^(?=.*\d)/, message: "at least one digit" },
+            { regex: /^(?=.*[@$!%*?&])/, message: "at least one symbol (@$!%*?&)" },
+            { regex: /^.{6,}$/, message: "at least six characters" },
+        ];
+
+        const errorMessage = requirements
+            .filter((requirement) => !requirement.regex.test(password))
+            .map((requirement) => requirement.message)
+            .join(", ");
+
+        if (errorMessage) {
+            return { isValid: false, errorMessage: `Password must contain ${errorMessage}.` };
+        } else {
+            return { isValid: true };
+        }
+    };
+
     return (
         <div className="hero min-h-screen ">
             <div className="hero-content flex-col lg:flex-row-reverse border border-red-600 rounded-2xl">
@@ -46,6 +119,7 @@ const SignUp = () => {
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered" />
                         </div>
+                        {errorMsg && <div className="text-red-600">{errorMsg}</div>}
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Sign Up</button>
                         </div>
