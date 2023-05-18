@@ -152,7 +152,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-9. **` Add A Toy page will be a private route:`** 
+9. **` Add A Toy page will be a private route:`** ✅✅✅ 
     <br/>
 
     > Create an **Add A Toy** page where there will be a form having the following fields:

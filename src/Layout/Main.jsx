@@ -7,7 +7,11 @@ const Main = () => {
         <>
             <PageNav />
             <Outlet />
-            <Footer/>
+
+            <Footer />
+
+
+
         </>
     );
 };
