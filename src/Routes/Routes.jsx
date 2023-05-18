@@ -8,15 +8,17 @@ import AllToyes from "../Pages/AllToyes/AllToyes";
 import MyToys from "../Pages/MyToys/MyToys";
 import AddToys from "../Pages/AddToys/AddToys";
 import PrivetRoute from "./PrivetRoute";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main/>,
+      errorElement:<Error/>,
       children:[
         {
             path:"/",
-            element:<Home/>
+            element:<Home/>,
         },
         {
             path:"/blogs",
