@@ -20,11 +20,11 @@ const PageNav = () => {
     }
     const navlist = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="">All Toys</Link></li>
+        <li><Link to="/alltoys">All Toys</Link></li>
         {user ? (
             <>
-                <li><Link to="/my-toys">My Toys</Link></li>
-                <li><Link to="/add-toy">Add a Toy</Link></li>
+                <li><Link to="/mytoys">My Toys</Link></li>
+                <li><Link to="/addtoys">Add a Toy</Link></li>
             </>
         ) : null}
         <li><Link to="/blogs">Blogs</Link></li>

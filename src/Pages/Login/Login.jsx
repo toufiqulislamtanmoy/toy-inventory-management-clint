@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 import useTitle from "../../CustomHooks/useTitle";
 const Login = () => {
     const { userLogin, googleLogin } = useContext(AuthContext);
-    const [errorMsg, setErrorMsg] = useState('');
     useTitle("Login")
     const navigate = useNavigate();
 
