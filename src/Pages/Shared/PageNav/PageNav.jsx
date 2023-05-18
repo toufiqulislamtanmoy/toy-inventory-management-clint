@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from '../../../assets/logo.png'
 const PageNav = () => {
     const navlist = <>
@@ -7,6 +7,7 @@ const PageNav = () => {
         <li><Link>My Toys</Link></li>
         <li><Link>Add A Toys</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
+
     </>
     return (
         <div className="navbar bg-slate-200 lg:px-24">
@@ -28,8 +29,14 @@ const PageNav = () => {
                     {navlist}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <img className="h-10 rounded-full" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />
+            <div className="navbar-end space-x-3">
+                <div>
+                    <img className="h-10 rounded-full" src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />
+                </div>
+                <div>
+                    <Link className="mr-3" to="/login">Login</Link>
+                    <button>Logout</button>
+                </div>
             </div>
         </div>
     );
