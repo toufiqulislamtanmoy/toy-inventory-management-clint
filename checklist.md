@@ -32,23 +32,23 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 🚩: 0 [ If we have any update we will mention it here ] 
 <br/>
 ✅✅✅✅✅✅✅✅
-## **Main Requirements** 
+## **Main Requirements** ✅✅✅ 
  1. Focus on making the website visually appealing. Ensure that
     - Color contrast is pleasing to the eye
     - The website does not have a `gobindo design`
     - The website has proper alignment and space
-    - If needed, customize the design of any component you are taking from any component library. (For example, you are using daisy ui & have taken a card component from Daisy, if needed, customize the styling of the card to make it reasonable rather than just copy & paste it.)
+    - If needed, customize the design of any component you are taking from any component library. (For example, you are using daisy ui & have taken a card component from Daisy, if needed, customize the styling of the card to make it reasonable rather than just copy & paste it.)✅✅✅ 
     <br/>
     <br/>
     
-    > **Note:** Your website can not be related to your previous assignments' layout/ design or any practice project shown in the course modules or our conceptual sessions. Ex: You can't copy any design or similar functionality/ layout of
-    - Dragon news
-    - Espresso Emporium
-    - Car Doctor
-    - Travel guru 
-    - Volunteer network
-    - Job Portal Website, Any conceptual session projects, or projects showed in our course.
-    - Any of your previous assignments
+    >✅✅✅  **Note:** Your website can not be related to your previous assignments' layout/ design or any practice project shown in the course modules or our conceptual sessions. Ex: You can't copy any design or similar functionality/ layout of
+    - Dragon news ✅✅✅ 
+    - Espresso Emporium✅✅✅ 
+    - Car Doctor✅✅✅ 
+    - Travel guru ✅✅✅ 
+    - Volunteer network✅✅✅ 
+    - Job Portal Website, Any conceptual session projects, or projects showed in our course.✅✅✅ 
+    - Any of your previous assignments✅✅✅ 
    
     <br/>
 
@@ -65,7 +65,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-4. **`Login & Registration systems:`** On the Registration and Login pages, display relevant error messages when necessary.
+4. **`Login & Registration systems:`** On the Registration and Login pages, display relevant error messages when necessary.✅✅✅ 
 
     > **Login Page:** When a user clicks on the login button, they will be redirected to the login page having the following: ✅✅✅
 
@@ -125,28 +125,28 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-7. **` All Toys`** page: Create an All Toys page where you will see the toys all the users have added in the tabular form. Each row of the All Toys table/list will have the following information:
+7. ✅✅✅ **` All Toys`** page: Create an All Toys page where you will see the toys all the users have added in the tabular form. Each row of the All Toys table/list will have the following information:
 
-    -   Seller: (if available) show the name of the person who posted the toy
-    -   Toy Name
-    -   Sub-category
-    -   Price
-    -   Available Quantity
-    -   View Details button
+    -   Seller: (if available) show the name of the person who posted the toy✅✅✅ 
+    -   Toy Name✅✅✅ 
+    -   Sub-category✅✅✅ 
+    -   Price✅✅✅ 
+    -   Available Quantity✅✅✅ 
+    -   View Details button✅✅✅ 
     <br/>
 
-    > Show 20 results by default by using `limit`
+    > Show 20 results by default by using `limit`✅✅✅ 
     > 
-    > Implement a search system on this page, based on the **Toy name.**
+    > Implement a search system on this page, based on the **Toy name.**✅✅✅ 
     <br/>
 
-    Without logging in, if a user clicks on the **View Details** button, they will be redirected to the Login Page. Make sure to take the user to the Details Page after the user successfully logs in.
+    Without logging in, if a user clicks on the **View Details** button, they will be redirected to the Login Page. Make sure to take the user to the Details Page after the user successfully logs in.✅✅✅ 
 
 <br/>
 
-8. **`Single toy details route will be a private route:`**
+8. **`Single toy details route will be a private route:`**✅✅✅ 
     
-    > After clicking on the **View Details** button, he/ she will be redirected to the **Toys Details** route **( /toy/:id )** containing the information **( picture, toy name, seller name, seller email, price, rating, available quantity, and detail description)**
+    > After clicking on the **View Details** button, he/ she will be redirected to the **Toys Details** ✅✅✅ route **( /toy/:id )**✅✅✅  containing the information **( picture, toy name, seller name, seller email, price, rating, available quantity, and detail description)**✅✅✅ 
     > 
     > (optional) If possible, display the view details in a modal
 
@@ -186,7 +186,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-11. For all the CRUD operations, show relevant toast/ notification/ anything with a meaningful message 
+11. For all the CRUD operations, show relevant toast/ notification/ anything with a meaningful message ✅✅✅ 
 
 <br/>
 

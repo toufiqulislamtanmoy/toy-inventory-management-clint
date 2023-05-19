@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         {
             path:"/alltoys",
             element:<AllToyes/>,
-            loader: ()=> fetch('http://localhost:5000/toys/')
+            loader: ()=> fetch('https://toy-monster-server-toufiqulislamtanmoy.vercel.app/toys/')
         },
         {
             path:"/mytoys",

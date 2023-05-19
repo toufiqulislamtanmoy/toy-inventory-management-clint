@@ -32,7 +32,7 @@ const AddToys = () => {
           
         console.log(toyData);
 
-        fetch('http://localhost:5000/toys',{
+        fetch('https://toy-monster-server-toufiqulislamtanmoy.vercel.app/toys',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

@@ -1,6 +1,8 @@
 import { useLoaderData } from 'react-router-dom';
-import { FaEye, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import useTitle from '../../CustomHooks/useTitle';
 const ToyDetails = () => {
+    useTitle("Toy Details");
     const singleToyDetails = useLoaderData()
     const { userName, userEmail, rating, description, price, quantity, toyUrl, toyName, subCategory } = singleToyDetails;
     return (

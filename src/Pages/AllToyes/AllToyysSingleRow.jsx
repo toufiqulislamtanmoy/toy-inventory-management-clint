@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { FaEye } from "react-icons/fa";
 const AllToyysSingleRow = ({ singleToy }) => {
     const { _id, subCategory, rating, description, price, quantity, userName, toyUrl, toyName, userEmail } = singleToy;
     return (
@@ -17,7 +17,7 @@ const AllToyysSingleRow = ({ singleToy }) => {
                 <h2><span className="font-bold">Quantity: </span>{quantity}</h2>
             </div>
             <div className="flex items-center justify-center">
-            <Link to={`/toyditails/${_id}`} className="btn text-green-500">View Details</Link>
+            <Link to={`/toyditails/${_id}`} title="View Details" className="btn"><FaEye/></Link>
             </div>
         </div>
     );
