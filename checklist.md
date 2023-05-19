@@ -155,16 +155,16 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 9. **` Add A Toy page will be a private route:`** ✅✅✅ 
     <br/>
 
-    > Create an **Add A Toy** page where there will be a form having the following fields:
-    - Picture URL of the toy,
-    - Name,
-    - seller name (if available from the logged in user)
-    - seller email (info from the logged in user)
-    - Sub-category ( For example: if the website is based on Educational and learning toys, the sub-categories can be Math Toys, Language Toys, and Science Toys.)
+    > Create an **Add A Toy** page where there will be a form having the following fields:✅✅✅
+    - Picture URL of the toy,✅✅✅
+    - Name,✅✅✅
+    - seller name (if available from the logged in user)✅✅✅
+    - seller email (info from the logged in user)✅✅✅
+    - Sub-category ( For example: if the website is based on Educational and learning toys, the sub-categories can be Math Toys, Language Toys, and Science Toys.)✅✅✅
     - Price, 
-    - Rating, 
-    - Available quantity
-    - Detail description
+    - Rating, ✅✅✅
+    - Available quantity✅✅✅
+    - Detail description✅✅✅
 
 <br/>
 
@@ -176,10 +176,10 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
     
     <br/>
 
-    - **Delete Action** - If they click the delete button, the Toy will be removed from the list. Before the delete, ask for a delete confirmation.
+    - **Delete Action** - If they click the delete button, the Toy will be removed from the list. Before the delete, ask for a delete confirmation.✅✅✅
     <br/>
     <br/>
-        > **Note:** If a user logs in they will only see the toys they have added. The user cannot see the toys other users added.
+        > **Note:** If a user logs in they will only see the toys they have added. The user cannot see the toys other users added.✅✅✅
     <br/>
 
  

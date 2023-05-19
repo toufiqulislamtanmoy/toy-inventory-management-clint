@@ -1,12 +1,13 @@
 import React from "react";
 import { FaPencilAlt, FaTrash } from "react-icons/fa";
-const MytoysRow = ({ singleToy,index }) => {
+import { Link } from "react-router-dom";
+const MytoysRow = ({ singleToy, index, handelDeleteToy }) => {
 
-    const { rating, description, price, quantity, userName, toyUrl, toyName, userEmail } = singleToy;
+    const { _id, rating, description, price, quantity, userName, toyUrl, toyName, userEmail } = singleToy;
 
     return (
         <tr>
-            <td>{index+1}</td>
+            <td>{index + 1}</td>
             <td>
                 <div className="avatar">
                     <div className="w-24 rounded">
@@ -25,14 +26,14 @@ const MytoysRow = ({ singleToy,index }) => {
             <td>{rating}</td>
             <td>
                 <span className=" w-[220px]">
-                  {description.length < 50 ? description : description.substring(0, 50)}...
+                    {description.length < 50 ? description : description.substring(0, 50)}...
                 </span>
                 <br />
 
             </td>
             <td className="space-x-4">
-                <button><FaPencilAlt className="text-green-500" /></button>
-                <button><FaTrash className="text-red-500" /></button>
+                <Link to={`/singletoy/${_id}`} className="btn text-green-500"><FaPencilAlt /></Link>
+                <button className="text-red-500 btn" ><FaTrash /></button>
             </td>
         </tr>
     );

@@ -2,11 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import useTitle from "../../CustomHooks/useTitle";
 import MytoysRow from "./MyToysRow/MytoysRow";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 const MyToys = () => {
     useTitle("My Toys")
     const { user } = useContext(AuthContext);
     const [userToys, setUserToys] = useState([]);
-    const url = `http://localhost:5000/toys/?email=${user.email}`;
+    const url = `https://toy-monster-server.vercel.app/toys/?email=${user.email}`;
     useEffect(() => {
         fetch(url).then(res => res.json()).then(data => {
             setUserToys(data)
@@ -15,12 +16,44 @@ const MyToys = () => {
     }, [url])
     const handleSort = (event) => {
         const sortCategory = parseInt(event.target.value);
-        const sortUrl = `http://localhost:5000/toys/?email=${user.email}&sortBy=${sortCategory}`;
+        const sortUrl = `https://toy-monster-server.vercel.app/toys/?email=${user.email}&sortBy=${sortCategory}`;
         fetch(sortUrl).then(res => res.json()).then(data => {
             setUserToys(data)
             console.log(data)
         })
     };
+
+    const handelDeleteToy = (id) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://toy-monster-server.vercel.app/toys/${id}`, {
+                    method: "DELETE"
+                }).then(res => res.json()).then(data => {
+                    if (data.deletedCount > 0) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                        const remaining = userToys.filter(singleToy => singleToy._id !== id);
+                        setUserToys(remaining);
+                    }
+                })
+            }
+        })
+    }
+
+    const handelToyUpdate = () => {
+
+    }
     return (
         <div className="overflow-x-auto h-[100vh]">
             <table className="table table-zebra w-full text-center">
@@ -50,6 +83,7 @@ const MyToys = () => {
                         userToys.map((singleToy, index) =>
                             <MytoysRow key={singleToy._id} singleToy={singleToy}
                                 index={index}
+                                handelDeleteToy={handelDeleteToy}
                             />
                         )
                     }
