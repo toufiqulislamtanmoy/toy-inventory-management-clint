@@ -1,5 +1,4 @@
 import { Link, useRouteError } from 'react-router-dom';
-import errorimg from "../../assets/eror404/error.png"
 import Lottie from "lottie-react"
 import error404 from "../../assets/eror404/error404.json"
 const Error = () => {

@@ -6,18 +6,20 @@ const MyToys = () => {
     useTitle("My Toys")
     const { user } = useContext(AuthContext);
     const [userToys, setUserToys] = useState([]);
-    const url = `https://toy-monster-server.vercel.app/toys/?email=${user.email}`;
+    const url = `http://localhost:5000/toys/?email=${user.email}`;
     useEffect(() => {
         fetch(url).then(res => res.json()).then(data => {
             setUserToys(data)
             console.log(data)
         })
     }, [url])
-    const handelSort = (event) => {
+    const handleSort = (event) => {
         const sortCategory = parseInt(event.target.value);
-        // Perform sort operation based on the selected category
-        console.log(typeof sortCategory, sortCategory);
-        // ...
+        const sortUrl = `http://localhost:5000/toys/?email=${user.email}&sortBy=${sortCategory}`;
+        fetch(sortUrl).then(res => res.json()).then(data => {
+            setUserToys(data)
+            console.log(data)
+        })
     };
     return (
         <div className="overflow-x-auto h-[100vh]">
@@ -26,7 +28,7 @@ const MyToys = () => {
                     <tr>
                         <th>
                             <div className="input-group">
-                                <select onChange={handelSort} className="select select-bordered">
+                                <select onChange={handleSort} className="select select-bordered">
                                     <option disabled selected>Sort By</option>
                                     <option value={1}>Less Price</option>
                                     <option value={-1}>High Price</option>
