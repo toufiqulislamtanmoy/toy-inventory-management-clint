@@ -4,7 +4,7 @@ import useTitle from "../../CustomHooks/useTitle";
 import banner from "../../assets/banner/banner.jpg"
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-const SingleToyDetails = () => {
+const SingleToyDetailsUpdate = () => {
     useTitle("Update Toy Details");
     const singleToyDitals = useLoaderData();
     const { _id, rating, description, price, quantity, toyUrl, toyName, subCategory } = singleToyDitals;
@@ -23,7 +23,7 @@ const SingleToyDetails = () => {
             description
         };
 
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-monster-server.vercel.app/toys/${_id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
@@ -117,4 +117,4 @@ const SingleToyDetails = () => {
     );
 };
 
-export default SingleToyDetails;
+export default SingleToyDetailsUpdate;

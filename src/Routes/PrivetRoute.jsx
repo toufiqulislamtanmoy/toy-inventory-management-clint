@@ -7,7 +7,7 @@ const PrivetRoute = ({children}) => {
     const location = useLocation();
     if (loading) {
         return (
-            <div className='h-[100vh] flex items-center content-center'>
+            <div className='h-[100vh] flex items-center justify-center'>
                 <progress className="progress w-56 text-center"></progress>
             </div>
         )
