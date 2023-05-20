@@ -1,7 +1,7 @@
 import { Link, useRouteError } from 'react-router-dom';
 import Lottie from "lottie-react"
 import error404 from "../../assets/eror404/error404.json"
-const Error = () => {
+const ErrorElement = () => {
     const { error, status } = useRouteError()
     return (
         <div className='h-[100vh] flex flex-col items-center justify-center space-y-5'>
@@ -16,4 +16,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default ErrorElement;

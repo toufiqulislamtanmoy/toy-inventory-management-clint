@@ -55,7 +55,7 @@ const Login = () => {
                 title: 'Login Successful',
                 text: `Welcome Back ${user.displayName}`,
             });
-            navigate("/", { replace: true });
+            navigate(destination, { replace: true });
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;

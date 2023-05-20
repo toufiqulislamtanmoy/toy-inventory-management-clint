@@ -86,7 +86,7 @@ const AllToyes = () => {
                 </div>
 
                 <div className="hidden lg:block">
-                    <Gallery />
+                    <Gallery>Similar Result</Gallery>
                 </div>
             </div>
         </div>
