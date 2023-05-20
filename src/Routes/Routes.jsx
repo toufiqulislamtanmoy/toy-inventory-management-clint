@@ -8,8 +8,6 @@ import AllToyes from "../Pages/AllToyes/AllToyes";
 import MyToys from "../Pages/MyToys/MyToys";
 import AddToys from "../Pages/AddToys/AddToys";
 import PrivetRoute from "./PrivetRoute";
-import Error from "../Pages/Error/Error";
-import SingleToyDetails from "../Pages/SingleToyDetailsUpdate/SingleToyDetailsUpdate";
 import SingleToyDetailsUpdate from "../Pages/SingleToyDetailsUpdate/SingleToyDetailsUpdate";
 import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 
@@ -38,7 +36,7 @@ const router = createBrowserRouter([
         {
             path:"/alltoys",
             element:<AllToyes/>,
-            loader: ()=> fetch('https://toy-monster-server-toufiqulislamtanmoy.vercel.app/toys/')
+            loader: ()=> fetch('https://toy-monster-server.vercel.app/toys')
         },
         {
             path:"/mytoys",
@@ -51,12 +49,12 @@ const router = createBrowserRouter([
         {
             path:"/singletoy/:id",
             element: <PrivetRoute><SingleToyDetailsUpdate/></PrivetRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+            loader:({params}) => fetch(`https://toy-monster-server.vercel.app/toys/${params.id}`)
         },
         {
             path:"/toyditails/:id",
             element:<PrivetRoute><ToyDetails/></PrivetRoute>,
-            loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+            loader:({params}) => fetch(`https://toy-monster-server.vercel.app/toys/${params.id}`)
         },
       ]
     },

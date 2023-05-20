@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 const Footer = () => {
+    AOS.init();
     return (
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded" data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
             <div>

@@ -24,7 +24,7 @@ const AllToyysSingleRow = ({ singleToy }) => {
             <td>{rating}</td>
             <td>
                 <div className="flex items-center justify-center">
-                    <Link className="" to={`/toyditails/${_id}`} className="btn bg-lime-500 ">
+                    <Link to={`/toyditails/${_id}`} className="btn bg-lime-500">
                         <FaEye className="mx-2" /> View Details
                     </Link>
                 </div>

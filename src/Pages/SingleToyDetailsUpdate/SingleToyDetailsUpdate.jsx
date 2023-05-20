@@ -23,7 +23,7 @@ const SingleToyDetailsUpdate = () => {
             description
         };
 
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-monster-server.vercel.app/toys/${_id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"
