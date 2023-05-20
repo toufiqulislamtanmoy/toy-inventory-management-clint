@@ -92,22 +92,22 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
     - **Banner section** -A slider/banner/ a meaningful section.✅✅✅ 
 
     - **Gallery Section** - Show relevant pictures. Try to make it attractive.✅✅✅ 
-    - **Shop by category**- Implement a tab system for **Shop by category** section. Explore [React-tabs](https://www.npmjs.com/package/react-tabs), or you can implement this using custom CSS. There will be 3 tabs, each containing sub-categories of the category you have chosen. 
+    - **Shop by category**- Implement a tab system for **Shop by category** ✅✅✅ section. Explore [React-tabs](https://www.npmjs.com/package/react-tabs)✅✅✅ , or you can implement this using custom CSS. There will be 3 tabs, each containing sub-categories of the category you have chosen. ✅✅✅ 
     <br/>
 
-    > For example, if the website is based on **Educational and learning toys**, the sub-categories for the **3** tabs can be **Math Toys, Language Toys, engineering toys, and Science Toys, etc.**. You need at least 3 sub-categories.
+    > For example, if the website is based on **Educational and learning toys**, the sub-categories for the **3** tabs can be **Math Toys, Language Toys, engineering toys, and Science Toys, etc.**. You need at least 3 sub-categories.✅✅✅ 
     <br/>
 
-    > Each tab will have minimum 2 toys, and each toy will have the following information:
-    - Picture, 
-    - Name,
-    - Price, 
-    - Rating and 
-    - View Details button. 
+    > Each tab will have minimum 2 toys✅✅✅ , and each toy will have the following information:
+    - Picture, ✅✅✅ 
+    - Name,✅✅✅ 
+    - Price, ✅✅✅ 
+    - Rating✅✅✅  and 
+    - View Details button.✅✅✅  
     
     <br/>
             
-    > **Note:** When a user is not logged in and if he/ she clicks on the View Details button, notify the user with a message **“You have to log in first to view details”** by using a toast/ notification/ anything. Also, redirect him/ her to the login page. Without a login, you can not visit the single toy details page.
+    > **Note:** When a user is not logged in and if he/ she clicks on the View Details button, notify the user with a message **“You have to log in first to view details”**✅✅✅  by using a toast/ notification/ anything✅✅✅ . Also, redirect him/ her to the login page.✅✅✅  Without a login, you can not visit the single toy details page.✅✅✅ 
 
     - **Extra Section:** Add two relevant sections. Try to make them attractive.
 
@@ -125,7 +125,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-7. ✅✅✅ **` All Toys`** page: Create an All Toys page where you will see the toys all the users have added in the tabular form. Each row of the All Toys table/list will have the following information:
+7. ✅✅✅ **` All Toys`** page: Create an All Toys page where you will see the toys all the users have added in the tabular form. Each row of the All Toys table✅✅✅ /list will have the following information:
 
     -   Seller: (if available) show the name of the person who posted the toy✅✅✅ 
     -   Toy Name✅✅✅ 
@@ -206,7 +206,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 1. **Commits & readme:**
 
     - Minimum 18 meaningful git commits on the client-side repository.✅✅✅
-    - Minimum 8 meaningful commits on the server-side repository.
+    - Minimum 8 meaningful commits on the server-side repository.✅✅✅ 
     - Create a readme for client-side and write about your project (at least 5 bullet points). ** Remember to add your client-side live link to your website here.**
 
 <br/>
@@ -217,7 +217,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-4. Use the [AOS Package](https://www.npmjs.com/package/aos) in the home page. At least in one place on the home page. Using AOS on other pages is optional.
+4. Use the [AOS Package](https://www.npmjs.com/package/aos) in the home page. At least in one place on the home page. Using AOS on other pages is optional.✅✅✅
 
 <br/>
 

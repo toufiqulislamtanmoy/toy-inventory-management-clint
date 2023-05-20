@@ -37,10 +37,28 @@ const AllToyes = () => {
 
     return (
         <div className="grid lg:grid-cols-4">
-            <div className="lg:col-span-3 order-2 lg:order-1  mx-10 my-20">
-                {filteredData.slice(0, showAllData ? allToysData.length : 20).map((singleToy) => (
-                    <AllToyysSingleRow key={singleToy._id} singleToy={singleToy} />
-                ))}
+            <div className="overflow-x-auto col-span-3 order-2 lg:order-1 lg:my-20 mx-0 lg:mx-10">
+                <table className="table table-zebra w-full text-center">
+                    <thead>
+                        <tr>
+                            <th>Toy</th>
+                            <th>Toy Name</th>
+                            <th>Sub Category</th>
+                            <th>Seller Info</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Rating</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {filteredData.slice(0, showAllData ? allToysData.length : 20).map((singleToy) => (
+                            <AllToyysSingleRow key={singleToy._id} singleToy={singleToy} />
+                        ))}
+                    </tbody>
+                </table>
+
+                <div className="text-center">
                 {!showAllData ? (
                     <button className="bg-blue-500 text-white py-2 px-4 mt-4" onClick={handleShowMore}>
                         Show More
@@ -51,7 +69,9 @@ const AllToyes = () => {
                     </button>
                 )}
             </div>
-            <div className="my-20 order-1 lg:order-2">
+            </div>
+
+            <div className="col-span-3 lg:col-span-1 my-10 lg:my-20 order-1 lg:order-2">
                 <div className="flex items-center justify-center mx-10 lg:mx-0">
                     <input
                         type="text"
@@ -74,3 +94,5 @@ const AllToyes = () => {
 };
 
 export default AllToyes;
+
+

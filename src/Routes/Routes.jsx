@@ -51,12 +51,12 @@ const router = createBrowserRouter([
         {
             path:"/singletoy/:id",
             element: <PrivetRoute><SingleToyDetailsUpdate/></PrivetRoute>,
-            loader:({params}) => fetch(`https://toy-monster-server.vercel.app/toys/${params.id}`)
+            loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
         },
         {
             path:"/toyditails/:id",
             element:<PrivetRoute><ToyDetails/></PrivetRoute>,
-            loader:({params}) => fetch(`https://toy-monster-server.vercel.app/toys/${params.id}`)
+            loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
         },
       ]
     },

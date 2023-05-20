@@ -1,25 +1,39 @@
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 const AllToyysSingleRow = ({ singleToy }) => {
-    const { _id, subCategory, rating, description, price, quantity, userName, toyUrl, toyName, userEmail } = singleToy;
+    const { _id, subCategory, rating, price, quantity, userName, toyUrl, toyName, userEmail } = singleToy;
     return (
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 space-y-5 p-5 shadow">
-            <div className="flex flex-col items-center justify-center space-y-4">
-                <img className="w-24" src={toyUrl} alt="" />
-                <h2 className="font-semibold text-xl">{toyName}</h2>
-                <h4>{subCategory}</h4>
-            </div>
-            <div className="flex items-center justify-center">
-                <h2><span className="font-bold">Seller Name :</span> {userName}</h2>
-            </div>
-            <div className="flex flex-col space-y-4 items-center justify-center">
-                <h2><span className="font-bold">Price: </span> {price} <span className="text-3xl">৳</span></h2>
-                <h2><span className="font-bold">Quantity: </span>{quantity}</h2>
-            </div>
-            <div className="flex items-center justify-center">
-            <Link to={`/toyditails/${_id}`} title="View Details" className="btn"><FaEye/></Link>
-            </div>
-        </div>
+
+        <tr>
+            <td>
+                <div className="avatar">
+                    <div className="w-24 rounded">
+                        <img src={toyUrl} alt="Toy Thumbnail" />
+                    </div>
+                </div>
+            </td>
+            <td>{toyName}</td>
+            <td>{subCategory}</td>
+            <td>
+                {userName}
+                <br />
+                <span className="badge badge-ghost badge-sm ">{userEmail}</span>
+            </td>
+            <td>{price} <span className="text-3xl">৳</span> </td>
+            <td>{quantity}</td>
+            <td>{rating}</td>
+            <td>
+                <div className="flex items-center justify-center">
+                    <Link className="" to={`/toyditails/${_id}`} className="btn bg-lime-500 ">
+                        <FaEye className="mx-2" /> View Details
+                    </Link>
+                </div>
+            </td>
+
+        </tr>
+            
+
+
     );
 };
 

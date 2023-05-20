@@ -32,8 +32,8 @@ const MytoysRow = ({ singleToy, index, handelDeleteToy }) => {
 
             </td>
             <td className="space-x-4">
-                <Link to={`/singletoy/${_id}`} className="btn text-green-500"><FaPencilAlt /></Link>
-                <button onClick={()=> handelDeleteToy(_id)} className="text-red-500 btn" ><FaTrash /></button>
+                <Link to={`/singletoy/${_id}`} className="btn bg-green-500"><FaPencilAlt /></Link>
+                <button onClick={()=> handelDeleteToy(_id)} className="bg-red-500 btn" ><FaTrash /></button>
             </td>
         </tr>
     );

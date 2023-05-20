@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const PrivetRoute = ({children}) => {
     const { user, loading } = useContext(AuthContext);
@@ -16,6 +17,11 @@ const PrivetRoute = ({children}) => {
     if (user?.email) {
         return children;
     }
+    Swal.fire({
+        icon: 'warning',
+        title: 'Opps..!',
+        text: "You have to log in first to view details",
+    });
     return <Navigate to="/login" state={{ from: location }} />;
 };
 
